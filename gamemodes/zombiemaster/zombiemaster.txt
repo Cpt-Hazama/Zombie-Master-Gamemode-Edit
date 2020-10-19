@@ -1,0 +1,276 @@
+"zombiemaster"
+{
+	"base"		"base"
+	"title"		"Zombie Master"
+	"maps"		"^zm_"
+	"menusystem"	"1"
+	"workshopid"	"591300663"
+
+	"author_name"		"ForrestMarkX"
+	"author_email"		"forrestmarkx@outlook.com"
+	"author_url"		"http://steamcommunity.com/id/ForrestMarkX/"
+
+	"settings"
+	{
+		1
+		{
+			"name"		"zm_physexp_forcedrop_radius"
+			"text"		"Physics Explosion Drop Radius"
+			"help"		"The max radius for a physics explosion to force the player to drop his held prop"
+			"type"		"Numeric"
+			"default"	"128"
+		}
+		
+		2
+		{
+			"name"		"zm_debug_nozombiemaster"
+			"text"		"[Debug] No ZombieMaster"
+			"help"		"Do not have a Zombie Master (Used for debugging)"
+			"type"		"CheckBox"
+			"default"	"0"
+		}
+		
+		3
+		{
+			"name"		"zm_roundlimit"
+			"text"		"Round Limit"
+			"help"		"How many rounds that will be played"
+			"type"		"Numeric"
+			"default"	"2"
+		}
+		
+		5
+		{
+			"name"		"zm_zombiemax"
+			"text"		"Max Zombie Population"
+			"help"		"Sets maximum number of zombies the ZM is allowed to have active at once. Works like typical unit limit in RTS games."
+			"type"		"Numeric"
+			"default"	"50"
+		}
+		
+		6
+		{
+			"name"		"zm_ambush_triggerrange"
+			"text"		"Ambush Trigger Range"
+			"help"		"The range ambush trigger points have."
+			"type"		"Numeric"
+			"default"	"96"
+		}
+		
+		7
+		{
+			"name"		"zm_max_ragdolls"
+			"text"		"Max Ragdolls"
+			"help"		"Max ragdolls that can exist at one time."
+			"type"		"Numeric"
+			"default"	"15"
+		}
+		
+		8
+		{
+			"name"		"zm_maxresource_increase"
+			"text"		"Max Resource Increase"
+			"help"		"Max increase in resources and income based on player count."
+			"type"		"Numeric"
+			"default"	"35"
+		}
+		
+		9
+		{
+			"name"		"zm_ragdoll_fadetime"
+			"text"		"Ragdoll Fade Time"
+			"help"		"Time before ragdolls will start to fadeout."
+			"type"		"Numeric"
+			"default"	"30"
+		}
+		
+		10
+		{
+			"name"		"zm_trap_triggerrange"
+			"text"		"Trap Trigger Range"
+			"help"		"How close a player has to be before a trap is triggered"
+			"type"		"Numeric"
+			"default"	"96"
+		}
+		
+		11
+		{
+			"name"		"zm_incometime"
+			"text"		"Income Rate"
+			"help"		"How much time in seconds before the ZM receives income"
+			"type"		"Numeric"
+			"default"	"5"
+		}
+		
+		12
+		{
+			"name"		"zm_resourcegainperplayerdeathmin"
+			"text"		"Minimum Resource Gain"
+			"help"		"Min resources that can be added on a players death"
+			"type"		"Numeric"
+			"default"	"50"
+		}
+		
+		13
+		{
+			"name"		"zm_resourcegainperplayerdeathmax"
+			"text"		"Maximum Resource Gain"
+			"help"		"Max resources that can be added on a players death"
+			"type"		"Numeric"
+			"default"	"100"
+		}
+		
+		14
+		{
+			"name"		"zm_physexp_cost"
+			"text"		"Explosion Cost"
+			"help"		"How much spawning a explosion will cost."
+			"type"		"Numeric"
+			"default"	"400"
+		}
+		
+		15
+		{
+			"name"		"zm_spotcreate_cost"
+			"text"		"Hidden Zombie Cost"
+			"help"		"How much spawning a hidden zombie will cost."
+			"type"		"Numeric"
+			"default"	"100"
+		}
+		
+		16
+		{
+			"name"		"zm_cost_shambler"
+			"text"		"Shambler Cost"
+			"help"		"The cost to spawn a Shambler"
+			"type"		"Numeric"
+			"default"	"10"
+		}
+		
+		17
+		{
+			"name"		"zm_cost_banshee"
+			"text"		"Banshee Cost"
+			"help"		"The cost to spawn a Banshee"
+			"type"		"Numeric"
+			"default"	"70"
+		}
+		
+		18
+		{
+			"name"		"zm_cost_hulk"
+			"text"		"Hulk Cost"
+			"help"		"The cost to spawn a Hulk"
+			"type"		"Numeric"
+			"default"	"60"
+		}
+		
+		19
+		{
+			"name"		"zm_cost_drifter"
+			"text"		"Drifter Cost"
+			"help"		"The cost to spawn a Drifter"
+			"type"		"Numeric"
+			"default"	"25"
+		}
+
+		20
+		{
+			"name"		"zm_cost_immolator"
+			"text"		"Immolator Cost"
+			"help"		"The cost to spawn a Immolator"
+			"type"		"Numeric"
+			"default"	"100"
+		}
+		
+		21
+		{
+			"name"		"zm_popcost_banshee"
+			"text"		"Banshee Population Count"
+			"help"		"How much a Banshee will add to the global zombie population."
+			"type"		"Numeric"
+			"default"	"5"
+		}
+		
+		22
+		{
+			"name"		"zm_popcost_hulk"
+			"text"		"Hulk Population Count"
+			"help"		"How much a Hulk will add to the global zombie population."
+			"type"		"Numeric"
+			"default"	"4"
+		}
+		
+		23
+		{
+			"name"		"zm_popcost_shambler"
+			"text"		"Shambler Population Count"
+			"help"		"How much a Shambler will add to the global zombie population."
+			"type"		"Numeric"
+			"default"	"1"
+		}
+		
+		24
+		{
+			"name"		"zm_popcost_immolator"
+			"text"		"Immolator Population Count"
+			"help"		"How much a Immolator will add to the global zombie population."
+			"type"		"Numeric"
+			"default"	"5"
+		}
+		
+		25
+		{
+			"name"		"zm_popcost_drifter"
+			"text"		"Drifter Population Count"
+			"help"		"How much a Drifter will add to the global zombie population."
+			"type"		"Numeric"
+			"default"	"3"
+		}
+		
+		26
+		{
+			"name"		"zm_zombie_health"
+			"text"		"Shambler Health"
+			"help"		"How much health a Shambler will have on spawn."
+			"type"		"Numeric"
+			"default"	"55"
+		}
+		
+		27
+		{
+			"name"		"zm_fastzombie_health"
+			"text"		"Banshee Health"
+			"help"		"How much health a Banshee will have on spawn."
+			"type"		"Numeric"
+			"default"	"40"
+		}
+		
+		28
+		{
+			"name"		"zm_zombie_poison_health"
+			"text"		"Hulk Health"
+			"help"		"How much health a Hulk will have on spawn."
+			"type"		"Numeric"
+			"default"	"175"
+		}
+		
+		29
+		{
+			"name"		"zm_burnzombie_health"
+			"text"		"Immolator Health"
+			"help"		"How much health a Immolator will have on spawn."
+			"type"		"Numeric"
+			"default"	"110"
+		}
+		
+		30
+		{
+			"name"		"zm_dragzombie_health"
+			"text"		"Drifter Health"
+			"help"		"How much health a Drifter will have on spawn."
+			"type"		"Numeric"
+			"default"	"60"
+		}
+	}
+}
