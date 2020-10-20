@@ -65,7 +65,7 @@ hook.Add("StartCommand","ZombieMaster_SurviorAI",function(ply,cmd)
 	end
 
 	if IsValid(fEnt) then
-		if !fEnt:Alive() or IsValid(fEnt) && !fEnt:IsSurvivor() then
+		if !fEnt:Alive() or !fEnt:IsSurvivor() then
 			ply.ZM_Follow = NULL
 			return
 		end
@@ -88,13 +88,18 @@ hook.Add("StartCommand","ZombieMaster_SurviorAI",function(ply,cmd)
 			if !IsValid(enemy) then
 				if !IsValid(ply.ZM_PickupTarget) then
 					for _,v in ipairs(ents.FindInSphere(ply:GetPos(),500)) do
-						if ((v:IsWeapon() && !IsValid(v:GetOwner())) or (string.find(v:GetClass(),"ammo") && (IsValid(ply:GetActiveWeapon()) && ply:GetAmmoCount(ply:GetActiveWeapon().Primary.Ammo) < (ply:GetActiveWeapon().Primary.DefaultClip *3)))) && v:Visible(ply) then
+						if ((v:IsWeapon() && !IsValid(v:GetOwner()) && !ply:HasWeapon(v:GetClass())) or (string.find(v:GetClass(),"ammo") && (IsValid(ply:GetActiveWeapon()) && ply:GetAmmoCount(ply:GetActiveWeapon().Primary.Ammo) < (ply:GetActiveWeapon().Primary.DefaultClip *3)))) && v:Visible(ply) then
 							ply.ZM_PickupTarget = v
 							break
 						end
 					end
 				else
 					if gDist(ply.ZM_PickupTarget) <= 500 then
+						local v = ply.ZM_PickupTarget
+						if (v:IsWeapon() && ply:HasWeapon(v:GetClass())) then
+							ply.ZM_PickupTarget = NULL
+							return
+						end
 						cmd:SetForwardMove(ply:GetWalkSpeed())
 						ply:SetEyeAngles((ply.ZM_PickupTarget:GetPos() -ply:GetShootPos()):GetNormalized():Angle())
 					end
