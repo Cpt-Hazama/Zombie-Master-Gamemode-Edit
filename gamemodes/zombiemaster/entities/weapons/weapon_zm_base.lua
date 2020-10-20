@@ -204,6 +204,9 @@ end
 function SWEP:Equip(NewOwner)
 	self.Dropped = false
 	NewOwner:EmitSound("items/ammo_pickup.wav", 75, math.random(95, 105), 0.8, CHAN_ITEM)
+	if NewOwner:IsBot() then
+		NewOwner:SelectWeapon(self)
+	end
 end
 
 function SWEP:EquipAmmo(ply)
